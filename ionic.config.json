@@ -1,0 +1,7 @@
+{
+  "name": "rendiApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      rendiApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding" style="text-align: center;">
+    <h1>Geo Localización</h1>
+    <p>Haga clic en el botón de abajo para obtener su ubicación actual.</p>
+  </div>
+  <div class="ion-padding">
+    <ion-item>
+      <ion-label>Longitude:{{longitude}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Latitude:{{latitude}}</ion-label>
+    </ion-item>
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+      <ion-fab-button href="https://www.google.com/maps?q={{latitude}},{{longitude}}">
+        <ion-icon name="map"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <div class="map-responsive">
+      <iframe src="https://www.google.com/maps?q={{latitude}},{{longitude}}"> </iframe>
+    </div>
+  </div>
+</ion-content>
