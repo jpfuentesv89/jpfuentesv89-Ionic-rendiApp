@@ -3,6 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  firebase: {
+    projectId: 'rendiapp-2e05f',
+    appId: '1:237011544914:web:89c7ec185a43b07d91688b',
+    databaseURL: 'https://rendiapp-2e05f-default-rtdb.firebaseio.com',
+    storageBucket: 'rendiapp-2e05f.appspot.com',
+    apiKey: 'AIzaSyDSYUFvB3cdUjjb1ONTCx4BCYEyiBWMjtw',
+    authDomain: 'rendiapp-2e05f.firebaseapp.com',
+    messagingSenderId: '237011544914',
+    measurementId: 'G-P3M0VZVSYS',
+  },
   production: false,
   firebaseConfig : {
     apiKey: "AIzaSyDSYUFvB3cdUjjb1ONTCx4BCYEyiBWMjtw",

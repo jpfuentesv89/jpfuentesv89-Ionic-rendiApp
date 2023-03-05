@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "rendiapp-2e05f"
+  },
+  "targets": {
+    "rendiapp-2e05f": {
+      "hosting": {
+        "app": [
+          "rendiapp-2e05f"
+        ]
+      }
+    }
   }
 }
