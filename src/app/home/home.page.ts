@@ -22,7 +22,7 @@ export class HomePage {
       message: 'Porfavor espera...'
     });
     await loading.present();
-    Geolocation.getCurrentPosition( { maximumAge: 10000, timeout: 5000, enableHighAccuracy: true } ).then((resp) => {
+    Geolocation.getCurrentPosition( { maximumAge: 1000, timeout: 10000, enableHighAccuracy: true } ).then((resp) => {
       this.latitude = resp.coords.latitude;
       this.longitude = resp.coords.longitude;
       loading.dismiss();
