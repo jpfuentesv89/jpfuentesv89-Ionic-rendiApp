@@ -24,7 +24,6 @@ log.txt
 /plugins
 /.vscode
 /.firebase
-/android
 
 # Compiled output
 /dist
