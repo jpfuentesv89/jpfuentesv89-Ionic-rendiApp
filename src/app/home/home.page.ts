@@ -26,11 +26,10 @@ export class HomePage {
       this.latitude = resp.coords.latitude;
       this.longitude = resp.coords.longitude;
       loading.dismiss();
-      this.presentAlert('Localizacion obtenida')
     }).catch((error) => {
       console.log('Error al obtener la ubicación', error);
       loading.dismiss();
-      this.presentAlert('Sin señal GPS' + JSON.stringify(error))
+      this.presentAlert('Sin cobertura GPS o GPS desactivado, favor revisar')
     });
   }
 
