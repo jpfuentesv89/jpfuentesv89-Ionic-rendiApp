@@ -4,63 +4,97 @@
     <div class="ion-padding">Seleccione el motivo de su detención</div>
   </ion-toolbar>
 
-  <ion-content [fullscreen]="true"> 
-  <div class="row">
+  <body>
+    <ion-content [fullscreen]="true">
+      <div class="row">
 
-    <div class="column">
-      <ion-card color="light">
-        <ion-button color="light">
-          <img src="https://img.icons8.com/3d-fluency/94/null/inspection.png">
-        </ion-button>
-        <div>
-          <ion-label>Ticket o POS</ion-label>
+        <div class="column">
+          <ion-card color="light">
+            <ion-button color="light">
+              <img src="https://img.icons8.com/3d-fluency/94/null/starred-ticket.png">
+            </ion-button>
+            <div>
+              <ion-label>Ticket o POS</ion-label>
+            </div>
+          </ion-card>
         </div>
-      </ion-card>
-    </div>
 
-    <div class="column">
-      <ion-card color="light">
-        <ion-button color="light">
-          <img src="https://img.icons8.com/3d-fluency/94/null/gas-station.png">
-        </ion-button>
-        <div>
-          <ion-label>Carga Combustible</ion-label>
+        <div class="column">
+          <ion-card color="light">
+            <ion-button color="light" (click)='combustibleParada()'>
+              <img src="https://img.icons8.com/3d-fluency/94/null/gas-station.png">
+            </ion-button>
+            <div>
+              <ion-label>Carga Combustible</ion-label>
+            </div>
+          </ion-card>
         </div>
-      </ion-card>
-    </div>
 
-    <div class="column">
-      <ion-card color="light">
-        <ion-button color="light">
-          <img src="https://img.icons8.com/3d-fluency/94/null/user-group-man-woman.png">
-        </ion-button>
-        <div>
-          <ion-label>Personal</ion-label>
+        <div class="column">
+          <ion-card color="light">
+            <ion-button color="light">
+              <img src="https://img.icons8.com/3d-fluency/94/null/user-group-man-woman.png">
+            </ion-button>
+            <div>
+              <ion-label>Personal</ion-label>
+            </div>
+          </ion-card>
         </div>
-      </ion-card>
-    </div>
 
-    <div class="column">
-      <ion-card color="light">
-        <ion-button color="light">
-          <img src="https://img.icons8.com/3d-fluency/94/null/truck.png">
-        </ion-button>
-        <div>
-          <ion-label>Falla Camioneta</ion-label>
+        <div class="column">
+          <ion-card color="light">
+            <ion-button color="light">
+              <img src="https://img.icons8.com/3d-fluency/94/null/user-location.png">
+            </ion-button>
+            <div>
+              <ion-label>Tu ruta en Maps</ion-label>
+            </div>
+          </ion-card>
         </div>
-      </ion-card>
-    </div>
 
-    <ion-fab vertical="bottom" horizontal="center" slot="fixed" style="margin-bottom: 10%;" >
-      <ion-label style="margin-left: -35%;">En donde me encuentro</ion-label>
-      <ion-fab-button href="https://www.google.com/maps?q={{latitude}},{{longitude}}">
-        <ion-icon name="map"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
+        <div class="column">
+          <ion-card color="light">
+            <ion-button color="light">
+              <img src="https://img.icons8.com/3d-fluency/94/null/inspection.png">
+            </ion-button>
+            <div>
+              <ion-label>Consulta Serie Pos</ion-label>
+            </div>
+          </ion-card>
+        </div>
 
-  </div>
-  </ion-content>
+        <div class="column">
+          <ion-card color="light">
+            <ion-button color="light">
+              <img src="https://img.icons8.com/3d-fluency/94/null/truck.png">
+            </ion-button>
+            <div>
+              <ion-label>Falla Camioneta</ion-label>
+            </div>
+          </ion-card>
+        </div>
 
+        <ion-fab vertical="bottom" horizontal="center" slot="fixed" style="margin-bottom: 10%;">
+          <ion-label style="margin-left: -35%;">En donde me encuentro</ion-label>
+          <ion-fab-button href="https://www.google.com/maps?q={{ticket.gps.latitud}},{{ticket.gps.longitud}}">
+            <ion-icon name="map"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+
+      </div>
+    </ion-content>
+    <ion-item>
+      <ion-label>Foto Perfil:</ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <label for="file">
+            <ion-icon name="doc"></ion-icon>
+          </label>
+          <input id="file" type="file" accept="application/.csv" (change)="selectFile($event)">
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </body>
 </ion-header>
 
 <ion-footer>
