@@ -5,7 +5,9 @@
   </ion-toolbar>
 
   <body>
+
     <ion-content [fullscreen]="true">
+
       <div class="row">
 
         <div class="column">
@@ -74,31 +76,34 @@
           </ion-card>
         </div>
 
-        <ion-fab vertical="bottom" horizontal="center" slot="fixed" style="margin-bottom: 10%;">
-          <ion-label style="margin-left: -35%;">En donde me encuentro</ion-label>
-          <ion-fab-button href="https://www.google.com/maps?q={{ticket.gps.latitud}},{{ticket.gps.longitud}}">
-            <ion-icon name="map"></ion-icon>
-          </ion-fab-button>
-        </ion-fab>
+        <div class="column" style="margin-top: 5%;">
+          <ion-label>Donde me encuentro</ion-label>
+            <ion-fab-button style="margin-left: 35%;" href="https://www.google.com/maps?q={{ticket.gps.latitud}},{{ticket.gps.longitud}}">
+              <ion-icon name="map"></ion-icon>
+            </ion-fab-button>
+        </div>
+
+        <div class="column" style="margin-top: 5%;">
+          <ion-label>Subir ruta</ion-label>
+            <label for="file">
+              <ion-fab-button style="margin-left: 35%;">
+                <input id="file" style="display: none;" type="file" accept="application/.csv"
+                  (change)="selectFile($event)">
+                <ion-icon name="document"></ion-icon>
+              </ion-fab-button>
+            </label>
+        </div>
 
       </div>
+
     </ion-content>
-    <ion-item>
-      <ion-label>Foto Perfil:</ion-label>
-      <ion-buttons slot="end">
-        <ion-button>
-          <label for="file">
-            <ion-icon name="doc"></ion-icon>
-          </label>
-          <input id="file" type="file" accept="application/.csv" (change)="selectFile($event)">
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
+
   </body>
+
 </ion-header>
 
 <ion-footer>
-  <ion-title>
+  <ion-title style="margin-bottom: 2%;">
     rendiApp
   </ion-title>
 </ion-footer>
