@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AlertController, LoadingController } from '@ionic/angular';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { Geolocation } from '@capacitor/geolocation';
-import { LoadingController } from '@ionic/angular';
-import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+
   ticket = {
     cliente: {
       rut: '',
@@ -38,10 +39,29 @@ export class HomePage {
 
   data: any;
 
-  constructor(public loadingController: LoadingController, public alertController: AlertController) {
+  constructor(public loadingController: LoadingController, public alertController: AlertController, private barcodeScanner: BarcodeScanner) {
 
     this.guardarUbicacion('');
 
+  }
+
+  ngOnInit() {
+  }
+
+  async scanCode() {
+    const loading = await this.loadingController.create({
+      message: 'Porfavor espera...'
+    });
+    await loading.present();
+    this.barcodeScanner.scan().then(barcodeData => {
+      this.data = barcodeData.text;
+      console.log('Barcode data', barcodeData);
+      this.presentAlert('Código escaneado con éxito' + this.data);
+      loading.dismiss();
+    }).catch(err => {
+      console.log('Error', err);
+      loading.dismiss();
+    });
   }
 
   combustibleParada() {

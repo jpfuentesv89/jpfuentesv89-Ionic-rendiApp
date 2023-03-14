@@ -1,76 +1,76 @@
 #container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #container strong {
-  font-size: 20px;
-  line-height: 26px;
+    font-size: 20px;
+    line-height: 26px;
 }
 
 #container p {
-  font-size: 16px;
-  line-height: 22px;
+    font-size: 16px;
+    line-height: 22px;
 
-  color: #8c8c8c;
+    color: #8c8c8c;
 
-  margin: 0;
+    margin: 0;
 }
 
 #container a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .column {
-  text-align: center;
-  float: left;
-  width: 50%;
-  height: 100%;
-  /* Should be removed. Only for demonstration */
+    text-align: center;
+    float: left;
+    width: 50%;
+    height: 100%;
+    /* Should be removed. Only for demonstration */
 }
 
 ion-card {
-  width: 95%;
-  margin: 5% auto;
-  height: 100%px;
+    width: 95%;
+    margin: 5% auto;
+    height: 100%px;
 }
 
 ion-label {
-  font-size: 18px;
-  font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 ion-title {
-  text-align: left;
-  font-weight: bold;
+    text-align: left;
+    font-weight: bold;
 }
 
 .ion-padding {
-  text-align: center;
-  font-weight: bold;
+    text-align: center;
+    font-weight: bold;
 }
 
 ion-button {
-  margin-top: 5%;
-  width: 90%;
-  height: 80%
+    margin-top: 5%;
+    width: 90%;
+    height: 80%
 }
 
-img{
-  width: 100%;
-  height: 100%;
+img {
+    width: 100%;
+    height: 100%;
 }
 
 ion-toolbar {
-  opacity: .5
+    opacity: .5
 }
