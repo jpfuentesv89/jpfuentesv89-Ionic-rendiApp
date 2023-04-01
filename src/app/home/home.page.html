@@ -1,19 +1,17 @@
 <ion-header [translucent]="true">
-
   <ion-toolbar>
-    <div class="ion-padding">Seleccione el motivo de su detención</div>
+    <div class="ion-padding">Motivo de su detención</div>
   </ion-toolbar>
 
   <body>
-
     <ion-content [fullscreen]="true">
-
       <div class="row">
-
         <div class="column">
           <ion-card color="light">
             <ion-button color="light">
-              <img src="https://img.icons8.com/3d-fluency/94/null/starred-ticket.png">
+              <img
+                src="https://img.icons8.com/3d-fluency/94/null/starred-ticket.png"
+              />
             </ion-button>
             <div>
               <ion-label>Ticket o POS</ion-label>
@@ -23,8 +21,10 @@
 
         <div class="column">
           <ion-card color="light">
-            <ion-button color="light" (click)='combustibleParada()'>
-              <img src="https://img.icons8.com/3d-fluency/94/null/gas-station.png">
+            <ion-button color="light" (click)="combustibleParada()">
+              <img
+                src="https://img.icons8.com/3d-fluency/94/null/gas-station.png"
+              />
             </ion-button>
             <div>
               <ion-label>Carga Combustible</ion-label>
@@ -35,7 +35,9 @@
         <div class="column">
           <ion-card color="light">
             <ion-button color="light">
-              <img src="https://img.icons8.com/3d-fluency/94/null/user-group-man-woman.png">
+              <img
+                src="https://img.icons8.com/3d-fluency/94/null/user-group-man-woman.png"
+              />
             </ion-button>
             <div>
               <ion-label>Personal</ion-label>
@@ -46,7 +48,9 @@
         <div class="column">
           <ion-card color="light">
             <ion-button color="light">
-              <img src="https://img.icons8.com/3d-fluency/94/null/user-location.png">
+              <img
+                src="https://img.icons8.com/3d-fluency/94/null/user-location.png"
+              />
             </ion-button>
             <div>
               <ion-label>Tu ruta en Maps</ion-label>
@@ -56,8 +60,10 @@
 
         <div class="column">
           <ion-card color="light">
-            <ion-button color="light" (click)='scanCode()'>
-              <img src="https://img.icons8.com/3d-fluency/94/null/inspection.png">
+            <ion-button color="light" (click)="scanCode()">
+              <img
+                src="https://img.icons8.com/3d-fluency/94/null/inspection.png"
+              />
             </ion-button>
             <div>
               <ion-label>Consulta Serie Pos</ion-label>
@@ -68,7 +74,7 @@
         <div class="column">
           <ion-card color="light">
             <ion-button color="light">
-              <img src="https://img.icons8.com/3d-fluency/94/null/truck.png">
+              <img src="https://img.icons8.com/3d-fluency/94/null/truck.png" />
             </ion-button>
             <div>
               <ion-label>Falla Camioneta</ion-label>
@@ -76,34 +82,36 @@
           </ion-card>
         </div>
 
-        <div class="column" style="margin-top: 5%;">
+        <div class="column" style="margin-top: 5%">
           <ion-label>Donde me encuentro</ion-label>
-            <ion-fab-button style="margin-left: 35%;" href="https://www.google.com/maps?q={{ticket.gps.latitud}},{{ticket.gps.longitud}}">
-              <ion-icon name="map"></ion-icon>
-            </ion-fab-button>
+          <ion-fab-button
+            style="margin-left: 35%"
+            href="https://www.google.com/maps?q={{ticket.gps.latitud}},{{ticket.gps.longitud}}"
+          >
+            <ion-icon name="map"></ion-icon>
+          </ion-fab-button>
         </div>
 
-        <div class="column" style="margin-top: 5%;">
+        <div class="column" style="margin-top: 5%">
           <ion-label>Subir ruta</ion-label>
-            <label for="file">
-              <ion-fab-button style="margin-left: 35%;">
-                <input id="file" style="display: none;" type="file" accept="application/.csv"
-                  (change)="selectFile($event)">
-                <ion-icon name="document"></ion-icon>
-              </ion-fab-button>
-            </label>
+          <label for="file">
+            <ion-fab-button style="margin-left: 35%">
+              <input
+                id="file"
+                style="display: none"
+                type="file"
+                accept="application/.csv"
+                (change)="selectFile($event)"
+              />
+              <ion-icon name="document"></ion-icon>
+            </ion-fab-button>
+          </label>
         </div>
-
       </div>
-
     </ion-content>
-
   </body>
-
 </ion-header>
 
 <ion-footer>
-  <ion-title style="margin-bottom: 2%;">
-    rendiApp
-  </ion-title>
+  <ion-title style="margin-bottom: 2%"> rendiApp </ion-title>
 </ion-footer>
